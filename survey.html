@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li a {
+  display: block;
+  width: 60px;
+}
+</style>
+
+<TITLE>Survey123 Resources</TITLE>
+</head>
+<body>
+<ul>
+  <li><a href="https://essmobiletaskforce.esri.com/resources">Home</a></li>
+</ul>
+<h2 align="center">Survey123 Resources</h2>
+<p align="center">There are a lot of resources on this page I would reccomend using Ctrl+F and type in buzz words to try and find links quickly.</p>
+<p align="center">I know the placement of a lot of these links may be subjective, any feedback on the location of resources is appreciated!</p>
+<br></br>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'foundation')">Survey123 Connect Foundational Workflows (Formulas, Calculations, and Styling)</button>
+  <button class="tablinks" onclick="openCity(event, 'advanced')">Advanced Workflows (Pull Data, GNSS Recievers, Coordinates)</button>
+  <button class="tablinks" onclick="openCity(event, 'web')">WebApp Workflows</button>
+  <button class="tablinks" onclick="openCity(event, 'webgis')">ArcGIS Enterprise/Online Workflows</button>
+  <button class="tablinks" onclick="openCity(event, 'webhooks')">Webhooks</button>
+</div>
+
+<div id="foundation" class="tabcontent">
+  <h3>Survey123 Connect Base Workflows:</h3>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/04/09/survey123-tricks-of-the-trade-repeats" target="_blank">Survey123 Tricks of the Trade: Repeats</a>
+  <p>Description:<br>This GeoNet article goes through the basics of Repeats, how look on the back end, repeat appearances, using expressions with repeats, styling repeats, aggregation functions within repeats, counts, nested repeats, and how they function in the inbox.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/09/15/survey123-tricks-of-the-trade-microsoft-excel" target="_blank">Microsoft Excel Tips and Tricks</a>
+  <p>Description:<br>This GeoNet article goes through general Excel tips and tricks not specifically for Survey123. It discussed formulas and data validation within templates and samples.</br></p>
+  <br></br>
+  <a href="https://doc.arcgis.com/en/survey123/desktop/create-surveys/troubleshootcreatesurveys.htm" target="_blank">Troubleshoot ArcGIS Survey123</a>
+  <p>Description: <br>This documentation goes through some common Form errors as well as Network, Publishing, and Portal errors. The documentation also goes through the workflow to configure Survey123 to log messages to an AppStudio Console.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/04/09/survey123-tricks-of-the-trade-repeats" target="_blank">ArcGIS Survey123 Repeats</a>
+  <p>Description: <br>This GeoNet article goes through a complete overview of Repeats in ArcGIS Survey123. The article goes through some use cases, basics, feature service schema, appearance, expressions, and functions.  </br></p>
+  <br></br> 
+  <a href="https://doc.arcgis.com/en/survey123/desktop/create-surveys/xlsformformulas.htm" target="_blank">ArcGIS Survey123 Formulas</a>
+  <p>Description: <br>This documentation goes through all the formulas available within Survey123 Connect. It goes through all the operators, constraints, calculations, as well as configuring empty values, using stored values from select multiple questions later in the survey, and working with the pulldata function.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2016/05/28/the-art-of-hiding" target="_blank">The Art of Hiding</a>
+  <p>Description: <br>This GeoNet Article goes through using the relevant column in your XLSForm to hide or show questions within the survey.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/08/08/survey123-tricks-of-the-trade-photo-watermarks" target="_blank">Photo Watermarks</a>
+  <p>Description: <br>This GeoNet article goes through the workflow of adding watermarks onto images captured with the survey.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2015/08/24/xlsform-mappings-to-arcgis-feature-services-an-introduction" target="_blank">Mapping XLSForm questions into ArcGIS Feature Service fields</a>
+  <p>Description: <br>This GeoNet article describes how XLSForm types are mapped into esri fields by default. The article also describes how users can take control and tell Survey123 how to best do the mapping and even add fields in the database that are not shown as questions in your form.</br></p>
+  <br></br>
+  <a href="https://support.esri.com/en/technical-article/000014835" target="_blank">How to author a ArcGIS Survey123 survey that matches a feature service</a>
+  <p>Description: <br>This support article goes through the workflow of linking a new Survey123 survey to an existing feature service. With the update to create the survey based on the existing feature service this workflow is not as relevant but will help understand what needs to be in place on the backend for everything to work successfully.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/10/26/the-power-of-nothing" target="_blank">Utilizing null in Survey123 XLSForms</a>
+  <p>Description: <br>This GeoNet article goes through the use cases for using the null field type within Survey123 Connect. Specifically, it goes through the use cases for using null field types with intermediate calculations, multiple geopoints within one survey, and matching existing feature services. </br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2018/06/08/html-links-for-survey123-to-just-about-anything-work-in-progress" target="_blank">HTML Links for Survey123 to just about anything</a>
+  <br></br>
+  <p>Description: <br>This GeoNet article goes through the workflow to configure Survey123 to use HTML tags to link to other applications like Twitter, WhatsApp, email etc.</br></p>
+  <br></br>  
+  <a href="https://community.esri.com/groups/survey123/blog/2019/09/26/survey123-tricks-of-the-trade-lines-and-polygons" target="_blank">Survye123 Tips of the Trade: Lines and Polygons</a>
+  <br></br>
+  <p>Description: <br>With Survey123 3.6 there is now support for line and polygon support. This GeoNet article goes through use cases for using lines and polygons within Survey123 and how to configure and use geotrace and geoshape questions.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/thread/216305-survey123-connect-isnt-accepting-new-portal-url" target="_blank">Survey123 Connect isn't Accepting New Portal URL's</a>
+  <p>Description: <br>This GeoNet question goes through the workflow to reset a Portal URL within Survey123 connect when some wonky behavior may be going on with existing Portal URLs.</br></p>
+  <br></br>  
+  <a href="https://community.esri.com/groups/survey123/blog/2016/01/06/prepare-basemaps-for-offline-use" target="_blank">Old Workflow</a>
+  <br></br>
+  <a href="https://doc.arcgis.com/en/survey123/desktop/create-surveys/preparebasemaps.htm" target="_blank">Prepare basemaps for offline use Survey123 (New Workflow)</a>
+  <p>Description: <br>This documentation goes through the workflow to prepare custom basemaps for offline use in the Survey123 Field app. It goes through configuring linked content and how to download the map package in the field app as well as side loading the map package directly to the device.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/11/20/survey123-tricks-of-the-trade-groups-grids-and-pages" target="_blank">Survey123 Groups, Grids, and Pages</a>
+  <p>Description: <br>This GeoNet article goes through techniques to control the organization and layout of questions within the XLSForm. Specifically, it goes through groups, grids, and pages, but also how to refine the size, placement, and look and feel of the survey.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2018/11/01/understanding-dynamic-labels-in-survey123-for-arcgis" target="_blank">Understand Dynamic labels in ArcGIS Survey123</a>
+  <p>Description: <br>This GeoNet article goes through the workflow to change the label of a question using answers from other questions in the form.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/09/26/using-the-image-map-appearance-in-survey123" target="_blank">Using the image-map appearance in ArcGIS Survey123</a>
+  <p>Description: <br>This GeoNet article goes through the workflow to allow Scalable Vector Graphics (SVG) field to be rendered in Survey123. This ultimately will allow field users to click the image for both select one and select multiple questions.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/12/11/making-other-work-harder-in-survey123-results" target="_blank">Utilizing the power of “Other” in Survey123</a>
+  <p>Description: <br>This GeoNet article covers the workflows of using the “or_other” method, manually adding Other as a choice option, and working with choice names that include spaces.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/10/09/smart-skething-in-survey123-stroke-by-stroke" target="_blank">Survey123 Smart Sketching</a>
+  <p>Description: <br>This GeoNet article discusses how to configure smart sketching. Users can sketch on top of an empty canvas or on top of predefined diagrams and photos using the image type question with the draw appearance.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/08/30/understanding-multiple-choice-questions-in-survey123-for-arcgis" target="_blank">Understand Multiple choice questions in Survey123</a>
+  <p>Description: <br>This GeoNet article discussed how to create multiple choice questions, as well as experiences and label formatting. It then goes into building XLSForm expressions for constraints, calculations, and relevant statements.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2015/08/24/surveys-with-style" target="_blank">Tips to create Surveys with style</a>
+  <p>Description: <br>This GeoNet article goes through 6 tips to make a survey look better using thumbnails, tiles, images, styles, and label HTML formatting and emojis.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2018/12/02/survey123-tricks-of-the-trade-xlsform-functions-for-lists" target="_blank">XLSForm functions for lists</a>
+  <p>Description: <br>This GeoNet article introduces a handful of XLSForm functions that will help work with user selections on lists.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/11/14/understanding-notes-in-survey123" target="_blank">Utilize notes in Survey123</a>
+  <p>Description: <br>This GeoNet article discussed the basics of using notes in Survey123 and a few use cases as to why they would be used.</br></p>
+  <br></br>
+</div>
+
+<div id="advanced" class="tabcontent">
+  <h3>Survey123 Connect Advanced Workflows:</h3>
+  <a href="https://community.esri.com/groups/survey123/blog/2018/07/06/understanding-reverse-geocoding-in-survey123-30" target="_blank">Understand Reverse Geocoding in Survey123</a>
+  <p>Description:<br>This GeoNet article discusses everything about using reverse geocoding within Survey123. Reverse geocoding can be performed in the field app by pressing and holding on the map or coordinates when the full geopoint view is opened, but this is only for confirming the location when it is being captured, the full geocoded description of the location is not saved and submitted to the survey.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2016/04/17/dates-and-time-in-survey123-for-arcgis" target="_blank">Dates and Time in ArcGIS Survey123</a>
+  <p>Description: <br>This GeoNet article goes through how to work with dates and times within Survey123. It also covers important concepts regarding how dates and time are modeled in ArcGIS. <br></br>As noted in the article a great resource to understand date and time settings within Survey123 is to use the Dates and Time sample.
+  </br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2016/06/08/calculations-on-geopoints" target="_blank">Calculations on GeoPoints</a>
+  <p>Description: <br>This GeoNet article goes through what components make up a GeoPoint and how to create a reverse geocoder within your Survey123 survey to allow users to select an option from a select one question and the GeoPoint question automatically centers over a predefined location.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/12/12/working-with-exif-image-metadata-in-survey123-for-arcgis" target="_blank">Working with EXIF image metadata in Survey123</a>
+  <p>Description: <br>Digital cameras embed metadata at the point of capture into image files. EXIF (Exchangeable Image File Format) is the most widely adopted standard for encoding this metadata within the photos you take.  <br></br>This GeoNet article goes through the use case as to why users may want to extract this EXIF information from their images and use that information within Survey123.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2016/05/17/understanding-barcode-questions-in-survey123-for-arcgis" target="_blank">Understand Barcode questions in ArcGIS Survey123</a>
+  <p>Description: <br>This GeoNet article goes through the workflow to configure Survey123 to allow field users to scan a barcode and add the data to the survey.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2016/10/27/the-pulldata-function-access-external-data" target="_blank">Understand the pulldata() function in ArcGIS Survey123</a>
+  <p>Description: <br>This GeoNet article goes through the use case of the Pulldata function and how it is configured. It also provides an example of a use case for the function and how it was configured.</br></p>
+  <br></br>  
+  <a href="https://www.youtube.com/watch?v=CTq-ux2v5ds&feature=youtu.be&list=PLGZUzt4E4O2L7h2PdpL7st93nURZAW58d" target="_blank">Introduction to the pulldata() function</a>
+  <br></br>
+  <p>Description: <br>This video goes through the workflow of using the pulldata function to pull in existing data from a CSV file.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2016/11/03/extracting-information-from-geopoint-questions" target="_blank">Pulling data from GeoPoint questions</a>
+  <p>Description: <br>This GeoNet article goes through the workflow of extracting information from a GeoPoint question to be used later in a survey using the Pulldata function.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/11/07/enforcing-a-workflow-in-survey123" target="_blank">Enforcing a workflow in Survey123</a>
+  <p>Description: <br>This GeoNet article goes through how one can configure a survey so that users must fill out specific values prior to filling out other sections within a survey.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2018/07/08/working-with-usng-and-mgrs-in-survey123-for-arcgis" target="_blank">Working with USNG and MGRS coordinates in ArcGIS Survey123</a>
+  <p>Description: <br>This GeoNet article goes through how to configure Survey123 to work with USNG and MGRS coordinates as well as some more advanced techniques.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/05/01/survey123-tricks-of-the-trade-xlsforms-and-location-quality" target="_blank">XLSForm and location quality</a>
+  <p>Description: <br>This GeoNet article discusses common techniques that will help better understand and improve the quality of location data obtained from field users. The article discusses configuring location accuracy thresholds as well as expressions.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/01/23/introducing-multiple-language-surveys" target="_blank">Utilize multiple languages within a Survey</a>
+  <p>Description: <br>This GeoNet article describes how to configure a Survey123 survey to support multiple languages. Multiple language surveys are authored in Survey123 Connect, but once published, they are supported in both the Survey123 Web and Field apps.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/11/25/creating-ticket-numbers-in-survey123-for-arcgis" target="_blank">Creating ticket numbers in Survey123</a>
+  <p>Description: <br>This GeoNet article discusses some options that are available to create an auto incrementing field to be used as a ticket number or incident number. Specifically, is discusses using Object ID’s, UUID’s, and handmade ticket numbers.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2018/01/09/survey123-progress-increment-bar-without-appstudio" target="_blank">How to create a progress bar within Survey123</a>
+  <p>Description: <br>This GeoNet article discusses the workflow to code a progress indicator within Survey123 to be used in the field.</br></p>
+</div>
+
+<div id="web" class="tabcontent">
+  <h3>Survey123 WebApp Resources:</h3>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/04/03/survey123-tricks-of-the-trade-survey123-website-links" target="_blank">Survey123 website links</a>
+  <p>Description: <br>This GeoNet article discusses the workflow to utilize the Survey123 website to create links that you can share with those who need to look at and analyze survey results. Additionally the links can be used to preconfigure the Survey123 website to target your ArcGIS Enterprise deployment.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/03/05/introducing-the-survey123-web-app-javascript-api" target="_blank">Introduction to the Survey123 Web App JavaScript API</a>
+  <p>Description: <br>The Survey123 web app JavaScript API allows you to embed, style, and interact with Survey123 forms within your own applications. This GeoNet article goes through the workflow to get started and strat creating a sample displaying the functionality.</br></p>
+  <br></br> 
+  <a href="https://community.esri.com/groups/survey123/blog/2020/01/24/understanding-web-form-version-locking-in-survey123" target="_blank">Understand Survey123 Web Form Version</a>
+  <p>Description:<br>This GeoNet article goes through how to check the web form version as well as locking the version and upgrading the web form.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/07/23/understanding-survey123-feature-reports" target="_blank">Understand Survey123 Feature Reports</a>
+  <p>Description: <br>This GeoNet article goes through how to configure the feature report template, defining the content and look and feel.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/02/06/survey123-tricks-of-the-trade-web-form-url-parameters" target="_blank">WebForm URL Parameters</a>
+  <p>Description: <br>This GeoNet article goes through the parameters that can be used to invoke the Survey123 web form. <br></br>The Custom URL scheme and URL Parameters are similar, but they are different things. The URL Scheme applies to the field app and the URL Parameters applies only to the web form.
+  </br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/04/03/survey123-tricks-of-the-trade-survey123-website-links" target="_blank">Survey123 Website links: Analyze and Data</a>
+  <p>Description: <br>This GeoNet article goes through the workflow to invoke the Analyze and Data tabs of the Survey123 Web App.</br></p>
+</div>
+
+<div id="webgis" class="tabcontent">
+  <h3>Survey123 ArcGIS Enterprise/Online:</h3>
+  <a href="https://community.esri.com/groups/survey123/blog/2016/12/14/migrating-data-from-the-survey-feature-service-to-an-enterprise-geodatabase" target="_blank">Migrating data from a Survey123 Feature service to an Enterprise Geodatabase</a>
+  <p>Description:<br>This GeoNet article provides a script that will log into ArcGIS Online and download the survey’s feature class as a file geodatabase. It then creates a table in the Enterprise geodatabase to store the data and will filter out records that have already been synchronized as needed. Finally, it will copy over the data from the database maintaining attachments and relationships. </br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/09/25/working-with-existing-feature-services-in-survey123-for-arcgis" target="_blank">Working with existing ArcGIS Enterprise Feature Services in Survey123</a>
+  <p>Description: <br>Survey123 can only work against Feature Services where the supportsApplyEditsWithGlobalID property is set to true. This GeoNet article goes through the requirements of an existing feature service to be used when creating a survey based on that service.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2015/07/29/survey123-and-arcgis-for-server" target="_blank">Survey123 and ArcGIS Server</a>
+  <p>Description: <br>This GeoNet article goes through the requirements needed to use Survey123 with ArcGIS Server services.</br></p>
+</div>
+
+<div id="webhooks" class="tabcontent">
+  <h3>Survey123 Webhooks:</h3>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/06/04/survey123-tricks-of-the-trade-integromat" target="_blank">Survey123 Tricks of the Trade: Integromat</a>
+  <p>Description:<br>This GeoNet article goes through common webhook workflows using Integromat and how to configure them. <br></br> Importantly this post goes through the workflow to configure Integromat with ArcGIS Enterprise. Integromat needs to communicate with your own ArcGIS Enterprise instance, and this will not be possible if ArcGIS Enterprise is running completely behind your firewall. <br></br> To adequately test webhook workflows with ArcGIS Enterprise please reach out to an Enterprise Tech Lead and they should be able to provide you with a public facing Enterprise deployment. 
+  </br></p>
+  <br></br>
+  <a href="https://support.integromat.com/hc/en-us/articles/360020842234-Survey123" target="_blank">Survey123 - Integromat Support</a>
+  <p>Description: <br>This is Integromat documentation for support with the Survey123 connector. It goes through what actions are available and how they are configured.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/06/02/getting-started-with-survey123-and-integromat" target="_blank">Getting started with Survey123 and Integromat</a>
+  <p>Description: <br>This GeoNet article goes through an introduction to the Survey123 connector in Integromat. The article goes through the different templates available and what each does.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/01/15/calling-python-scripts-with-survey123-integromat-and-google-cloud-functions" target="_blank">Calling Python scripts with Survey123, Integromat, and Google Cloud Functions</a>
+  <p>Description: <br>This GeoNet article goes through the workflow to make python scripts available and convenient to users without a python environment through Survey123’s webhooks. It also goes through calling a script each time a survey is submitted. Finally, the article goes though updating records in a separate feature layer based on survey responses.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/01/13/power-automate-html-survey123-pdf-report" target="_blank">Using Microsoft Power Automate (Flow) to create PDF reports through the webhook</a>
+  <p>Description: <br>This GeoNet article goes through how to use Microsoft Power Automate (Flow) to automatically create PDF feature reports.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/11/08/creating-ms-flow-webhooks-for-survey123-surveys-in-arcgis-online-part-1" target="_blank">Creating Power Automate (MS Flow) webhooks for Survey123 Surveys (Part 1)</a>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/11/18/creating-ms-flow-webhooks-for-survey123-surveys-in-arcgis-online-part-2" target="_blank">Creating Power Automate (MS Flow) webhooks for Survey123 Surveys (Part 2)</a>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/11/25/creating-ms-flow-webhooks-for-survey123-surveys-in-arcgis-online-part-3" target="_blank">Creating Power Automate (MS Flow) webhooks for Survey123 Surveys (Part 3)</a>
+  <p>Description: <br>These three-part GeoNet blogs go through getting started with Microsoft Power Automate, using the Survey’s time to convert the time zone and format the data and time string. Finally setting up an email template for the webhook to populate with dynamic elements from the survey data.</br></p>
+  <br></br>  
+  <a href="https://community.esri.com/groups/survey123/blog/2019/01/22/managing-time-and-date-from-survey123-in-microsoft-flow" target="_blank">Using Microsoft Power Automate to Manage Survey123 Time and Date</a>
+  <br></br>
+  <p>Description: <br>This GeoNet article goes through using the Microsoft Power Automate Survey123 connector to convert EPOCH to YYYY/MM/DD HH:mm:ss.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/05/15/automating-service-applications-with-integromat-and-dashboards" target="_blank">Using Survey123 Integormat Connector to process municipal requests</a>
+  <br></br>
+  <p>Description: <br>This GeoNet article goes through a workflow Tyler in the Survey123 community had devised to create an Integromat scenario that informs his municipality that a survey request was submitted. The webhook then allows his colleagues to add related information to the survey and save a Word Document for archive.</br></p>
+</div>
+
+<br></br>
+<h4 align="center">Quick reference</h3>
+  <a href="https://www.youtube.com/watch?v=S5V6MIrAKCk&t=1s" target="_blank">How to: Preserve GlobalID and GUID Relationships when Appending Records</a>
+  <p>Description:<br>This YouTube video by Peter Klingman goes through the workflow of maintaining relationships for related records when appending a feature class/service to another when the relationship is created using GlobalID and GUID fields.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/05/11/securing-data-in-public-surveys-survey123-web-designer" target="_blank">Securing Survey123 data when using the Web Designer</a>
+  <p>Description: <br>This GeoNet article discusses the workflow to share your survey publicly while keeping your data private when using the Survey123 Web Designer.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/05/11/securing-data-in-public-surveys-survey123-connect" target="_blank">Securing Survey123 data when using Survey123 Connect</a>
+  <p>Description: <br>This GeoNet article discusses the workflow to share your survey publicly while keeping your data private when using Survey123 Connect.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/community/arcgis-quickcapture/blog/2020/04/15/launching-quickcapture-from-survey123" target="_blank">Launching ArcGIS QuickCapture from ArcGIS Survey123</a>
+  <p>Description:<br>This GeoNet article goes through the workflow for configuring a Survey123 Survey to link an ArCGIS QuickCapture project.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2020/04/27/survey123-tricks-of-the-trade-embedding-a-survey-within-a-dashboard" target="_blank">How to Embed a survey in an ArcGIS Dashboard</a>
+  <p>Description:<br>This GeoNet article goes through the workflow for configuring a Survey123 Survey in an ArcGIS Dashboard. The end goal is to select an element in the Dashboard and open the corresponding survey. This workflow is often used for QA and QC workflows.</br></p>
+  <br></br>
+  <a href="https://doc.arcgis.com/en/survey123/browser/analyze-results/knownissuesanalyzeresults.htm" target="_blank">Known issues</a>
+  <p>Description:<br>This documentation goes though some known limitations when using Survey123.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2018/07/17/how-to-turn-supportsapplyeditswithgloablids-on-your-feature-layers" target="_blank">Enable supportsApplyEditssWithGlobalIDs on a feature layer</a>
+  <br></br>
+  <p>Description: <br>This GeoNet article discusses tips to enable supportsApplyEditsWithGlobalIDs on a feature service. The reason why Survey123 requires supportsApplyEditsWithGlobalIDs is that this setting is critical in order to guarantee clean transactions when uploading attachments (particularly when working in low bandwidth conditions) and to support nested repeats.</br></p>
+  <br></br>
+  <a href="https://support.esri.com/en/technical-article/000014793" target="_blank">How to create ArcGIS Survey123 surveys that connect to non-federated ArcGIS Server services</a>
+  <br></br>
+  <p>Description: <br>This support article goes through the requirements for Survey123 to connect to non-federated ArcGIS Server services and create surveys based on that service.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2019/03/05/direct-gnss-external-receiver-support-in-survey123-33" target="_blank">External GPS reciever Support in Survey123</a>
+  <p>Description: <br>This GeoNet article goes through preparing Survey123 for high accuracy data collection. It also goes through connecting the receiver to the device and configuring Survey123 to use that receiver.</br></p>
+  <br></br>
+  <a href="https://doc.arcgis.com/en/survey123/desktop/create-surveys/high-accuracy-prep.htm" target="_blank">Prepare Survey123 for high accuracy data collection</a>
+  <p>Description: <br>This documentation goes through preparing your survey to record GPS metadata, configuring a location accuracy threshold, and configuring location quality expressions.</br></p>
+  <br></br>
+  <a href="https://doc.arcgis.com/en/survey123/desktop/get-answers/high-accuracy-use.htm" target="_blank">Use a high accuracy receiver with Survey123</a>
+  <p>Description: <br>This documentation goes through configuring a receiver to your device and what ones are supported with the app.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2015/09/04/survey123-collector-and-geoform-a-quick-comparison" target="_blank">Survey123, Collector, and GeoForm comparison guideline</a>
+  <p>Description: <br>This GeoNet article compares Survey123, Collector, and GeoForm and their different use cases.</br></p>
+  <br></br>
+  <a href="https://community.esri.com/groups/survey123/blog/2017/12/08/an-alternative-way-to-update-the-media-folder-of-a-survey123-form-item" target="_blank">Updating the media folder of a Survey123 Form Item</a>
+  <br></br>
+  <p>Description: <br>This GeoNet article descripts the workflow to use a Python script and windows task scheduler to connect to ArcGIS Online or Portal, download the survey Form item, extract the zip file to a folder. It then copies the updated media folder files from a known location into the extracted folders, zip the form item back up again and upload it to ArcGIS Online or Portal. <br></br>The field workers will need to delete the survey from their gallery in the field app on the device, re-download the survey from the Download Surveys menu, open the survey and they will have access to the updated survey and associated media files.
+  </br></p>
+  <br></br>  
+  <a href="https://community.esri.com/groups/survey123/blog/2018/10/10/labels-for-multiple-choice-questions-using-arcade" target="_blank">Labels for multiple choice questions using arcade</a>
+  <p>Description: <br>This GeoNet article discusses how arcade can be used to take values stored and substitute appropriate labels. </br></p>
+  <br></br>
+  <a href="https://community.esri.com/thread/216305-survey123-connect-isnt-accepting-new-portal-url" target="_blank">Survey123 Connect is not Accepting New Portal URL</a>
+  <p>Description: <br>This GeoNet answered by Brandon Armstrong has a really good workflow for any issues in Survey123 Connect with ArcGIS Enterprise Portals.</br></p>
+  <br></br>
+  
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
